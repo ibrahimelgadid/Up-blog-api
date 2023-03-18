@@ -10,7 +10,7 @@
     "two": "nodemon server && npm --prefix client start"
   },
   "engines": {
-    "node": "v18.12.1"
+    "node": "^18"
   },
   "author": "",
   "license": "ISC",
