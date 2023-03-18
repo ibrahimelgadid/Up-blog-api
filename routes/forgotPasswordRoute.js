@@ -8,28 +8,22 @@ const router = express.Router();
 //           Import controllers
 //---------------------------------------------|
 const {
-  register,
-  login,
-  registerUsers,
-} = require("../contollers/authController");
+  resetMail,
+  resetPass,
+} = require("../contollers/forgotPasswordController");
 
 //---------------------------------------------|
 //              Registration routes
 //---------------------------------------------|
 
-// @route /auth/register
+// @route /pass/resetMail
 // @access public
 //@type post
-router.route("/register").post(register);
+router.route("/resetMail").post(resetMail);
 
-// @route /auth/login
+// @route /pass/resetPass
 // @access public
 //@type post
-router.route("/login").post(login);
-
-// @route /auth/users
-// @access public
-//@type post
-router.route("/").get(registerUsers);
+router.route("/resetPass/:email/:token").post(resetPass);
 
 module.exports = router;

@@ -30,11 +30,13 @@ mongoose
 //              IMPORT ROUTES
 //---------------------------------------------|
 const auth = require("./routes/authRoute");
+const pass = require("./routes/forgotPasswordRoute");
 
 //---------------------------------------------|
 //                 USE ROUTE
 //---------------------------------------------|
 app.use("/api/users", auth);
+app.use("/api/pass", pass);
 
 const PORT = process.env.PORT || 5000;
 

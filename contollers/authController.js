@@ -73,6 +73,12 @@ const login = asyncHandler(async (req, res) => {
 });
 
 //---------------------------------------------|
+//           get registered users functionality
+//---------------------------------------------|
+const registerUsers = asyncHandler(async (req, res) => {
+  res.status(200).json(await Auth.find());
+});
+//---------------------------------------------|
 //           generate token functionality
 //---------------------------------------------|
 const generateToken = (id) => {
@@ -85,4 +91,5 @@ const generateToken = (id) => {
 module.exports = {
   register,
   login,
+  registerUsers,
 };
