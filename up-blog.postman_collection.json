@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "d300eb7b-7ac2-4802-9d1b-762057a9da76",
+		"name": "up-blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4226832"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstname",
+									"value": "ibrahim",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "elgadid",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ibrahimelgadid30@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "8888",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://up-blog-api.vercel.app/api/users/register",
+							"protocol": "https",
+							"host": [
+								"up-blog-api",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "resetMail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://up-blog-api.vercel.app/api/pass/resetMail",
+							"protocol": "https",
+							"host": [
+								"up-blog-api",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"pass",
+								"resetMail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetPass",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getUsers",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
