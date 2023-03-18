@@ -24,53 +24,39 @@ $ npm run start:prod
 ```bash
 
 # Register
-http://localhost:5000/api/auth/register
+POST https://up-blog-api.vercel.app/api/users/register
     fileds:-
-      username,email,password,password2
+      firstname,lastname, email,password
 
 
 # Login
-http://localhost:5000/api/auth/login
+POST https://up-blog-api.vercel.app/api/users/login
     fileds:-
       email,password
 
 
 ```
 
-# ---> address book urls
+# ---> reset pass by email
 
 ```bash
 
-# Create address
-# must be authenticated
-POST http://localhost:5000/api/address/create
+# To send mail with reset password
+POST https://up-blog-api.vercel.app/api/pass/resetMail
     fileds:-
-      name,phone
+      email
 
 
-# Get all addresses
-# must be authenticated
-GET http://localhost:5000/api/address
+# To change password
+# at your mail will find link like this
+GET https://up-blog-api.vercel.app/api/pass/resetPass/ibrahimelgadid30@gmail.com/c358087e-6fa1-4a52-b084-732255b87ee0
 
-# Get all addresses for specific user
-# must be authenticated
-GET http://localhost:5000/api/address/${userId}/user
+  fileds:-
+      password
 
-
-# Get address by id
-# must be authenticated
-GET http://localhost:5000/api/address/${addressId}
+# To get all registered users
+GET https://up-blog-api.vercel.app/api/users
 
 
-# Update address by id
-# must be authenticated
-PATCH http://localhost:5000/api/address/${addressId}
-    fileds:-
-      name , phone or both
-
-
-# Delete address by id
-# must be authenticated
-DELETE http://localhost:5000/api/address/${addressId}
 
 ```
