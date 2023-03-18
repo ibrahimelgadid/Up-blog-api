@@ -2,12 +2,12 @@
   "name": "mern_stack_auth",
   "version": "1.0.0",
   "description": "authentication system",
-  "main": "server",
+  "main": "index",
   "scripts": {
-    "start": "node server",
-    "server": "nodemon server",
+    "start": "node index",
+    "server": "nodemon index",
     "client": "npm --prefix client start",
-    "two": "nodemon server && npm --prefix client start"
+    "two": "nodemon index && npm --prefix client start"
   },
   "engines": {
     "node": "18.x",
